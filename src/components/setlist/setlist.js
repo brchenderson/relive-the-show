@@ -95,7 +95,7 @@ class Setlist extends Component {
        /* 
         fetch('https://api.setlist.fm/rest/1.0/setlist/3bead804',{
             headers: {
-                'x-api-key': 'cc6f518e-ccc8-4537-8c85-d3413ae79556'
+                'x-api-key': 'KEY GOES HERE'
             },
         }).then( res => res.json())
         .then( data => console.log(data))
@@ -106,6 +106,7 @@ class Setlist extends Component {
         const theSetlist = this.state.setlist.sets.set[0].song.map(song => <li>{song.name}</li>)
         return(
             <div>
+                <h2>{this.state.setlist.artist.name} at {this.state.setlist.venue.name} ({this.state.setlist.venue.city.name}, {this.state.setlist.venue.city.state})</h2>
                 <ul>
                     {theSetlist}
                 </ul>
