@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import Setlist from './components/setlist/setlist'
 
 import SearchForm from './components/searchForm'
-import logo from './logo.svg';
 import './App.css';
 
 class App extends Component {
