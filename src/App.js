@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import Setlist from './components/setlist/setlist'
+import Setlist from './components/setlist'
 import SearchResults from './components/searchResults'
 import SearchForm from './components/searchForm'
 import './App.css';
@@ -7,6 +7,8 @@ import './App.css';
 class App extends Component {
   state = {
     searchValue: "",
+    artistName: "",
+    artistmbid: "",
     searchResults: {},
     allLists: {},
     setlist: {},

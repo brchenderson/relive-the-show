@@ -1,6 +1,7 @@
 const express = require('express');
 const fetch = require('node-fetch');
 const cors = require('cors');
+const config = require('./config')
 
 const app = express();
 
@@ -23,7 +24,7 @@ app.get('/search/:searchterm', cors(corsOptions), (req,res) => {
     fetch(searchURL,{
         headers: {
             'Accept': 'application/json',
-            'x-api-key': 'INSERT API KEY HERE'
+            'x-api-key': config.apikey
         },
     }).then( res => res.json()).then( results => res.send(results)).catch((e) => res.send(e));
 
@@ -34,7 +35,7 @@ app.get('/getlists/:mbid', cors(corsOptions), (req,res) => {
     fetch(searchURL,{
         headers: {
             'Accept': 'application/json',
-            'x-api-key': 'INSERT API KEY HERE'
+            'x-api-key': config.apikey
         },
     }).then( res => res.json()).then( results => res.send(results)).catch((e) => res.send(e));
 
@@ -45,7 +46,7 @@ app.get('/getlist/:setlist', cors(corsOptions), (req,res) => {
     fetch(searchURL,{
         headers: {
             'Accept': 'application/json',
-            'x-api-key': 'INSERT API KEY HERE'
+            'x-api-key': config.apikey
         },
     }).then( res => res.json()).then( results => res.send(results)).catch((e) => res.send(e));
 
