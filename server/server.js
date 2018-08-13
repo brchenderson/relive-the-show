@@ -19,8 +19,8 @@ var corsOptions = {
 
 app.get('/',(req,res) => res.send('Hello World!'))
 
-app.get('/search/:searchterm', cors(corsOptions), (req,res) => {
-    const searchURL = `https://api.setlist.fm/rest/1.0/search/artists?artistName=${encodeURIComponent(req.params.searchterm)}&p=1&sort=sortName`
+app.get('/search/:searchterm/:page', cors(corsOptions), (req,res) => {
+    const searchURL = `https://api.setlist.fm/rest/1.0/search/artists?artistName=${encodeURIComponent(req.params.searchterm)}&p=${req.params.page}&sort=sortName`
     fetch(searchURL,{
         headers: {
             'Accept': 'application/json',
@@ -30,8 +30,8 @@ app.get('/search/:searchterm', cors(corsOptions), (req,res) => {
 
 })
 
-app.get('/getlists/:mbid', cors(corsOptions), (req,res) => {
-    const searchURL = `https://api.setlist.fm/rest/1.0/artist/${encodeURIComponent(req.params.mbid)}/setlists?p=1`
+app.get('/getlists/:mbid/:page', cors(corsOptions), (req,res) => {
+    const searchURL = `https://api.setlist.fm/rest/1.0/artist/${encodeURIComponent(req.params.mbid)}/setlists?p=${req.params.page}`
     fetch(searchURL,{
         headers: {
             'Accept': 'application/json',

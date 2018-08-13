@@ -1,7 +1,9 @@
 ## Todos
-* Build setlist.fm and Spotify middleware
-* Allow concertgoers to search for shows by artist
-* Return resluts and allow someone to click through and get the setlist for that night
+* Build Spotify endpoints
+* Handle 404s
+* Handle artists that have no setlists
+* Handle setlists with no songs
+* Pagination
 * Add to Spotify if you want
 * Add Spotify oAuth
 * Basically the entire UI

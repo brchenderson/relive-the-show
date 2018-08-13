@@ -1,4 +1,4 @@
-import React, {Component} from 'react';
+import React from 'react';
 
 
 const Setlist = (props) => {
@@ -10,6 +10,7 @@ const Setlist = (props) => {
           <ul>
               {theSetlist}
           </ul>
+          <a onClick={props.backToSetlists}>This is the wrong setlist. Show me the search results again.</a>
       </div>
   )
   }
