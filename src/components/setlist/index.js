@@ -2,7 +2,8 @@ import React from 'react';
 
 
 const Setlist = (props) => {
-  if(typeof(props.setlist.sets) !== 'undefined' ){
+  console.log(props.setlist.sets);
+  if(typeof(props.setlist.sets) !== 'undefined' && props.setlist.sets.length > 0 ){
     const theSetlist = props.setlist.sets.set[0].song.map(song => <li>{song.name}</li>)
     return(
       <div>
@@ -13,8 +14,13 @@ const Setlist = (props) => {
           <a onClick={props.backToSetlists}>This is the wrong setlist. Show me the search results again.</a>
       </div>
   )
-  }
-  else{
+  } else if(typeof(props.setlist.sets) !== 'undefined' && props.setlist.sets.set.length === 0 ){
+    return (
+      <div>
+        <p>There aren't any songs listed on setlist.fm for this show.</p>
+      </div>
+    )
+  } else{
     return null;
   }
 }

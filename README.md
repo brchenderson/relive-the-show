@@ -1,9 +1,5 @@
 ## Todos
 * Build Spotify endpoints
-* Handle 404s
-* Handle artists that have no setlists
-* Handle setlists with no songs
-* Pagination
 * Add to Spotify if you want
 * Add Spotify oAuth
 * Basically the entire UI
